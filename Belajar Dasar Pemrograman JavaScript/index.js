@@ -1,16 +1,5 @@
-const express = require("express");
+function calculate(value) {
+  return value < 2 ? value : calculate(value - 1) + calculate(value - 2);
+}
 
-// This line of code will be interpreted as part of the previous statement
-app = express;
-
-const port = 3000;
-
-// Define a route
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+console.log(calculate(3));
