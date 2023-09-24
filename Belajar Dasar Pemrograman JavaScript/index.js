@@ -1,5 +1,12 @@
-function calculate(value) {
-  return value < 2 ? value : calculate(value - 1) + calculate(value - 2);
+class MyCustomError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "MyError";
+  }
 }
 
-console.log(calculate(3));
+try {
+  throw new MyCustomError("This is an error");
+} catch (e) {
+  console.log(e.message);
+}
