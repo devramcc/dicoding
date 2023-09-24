@@ -1,12 +1,8 @@
-class MyCustomError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = "MyError";
-  }
-}
-
 try {
-  throw new MyCustomError("This is an error");
+  const arr = [1, 2, 3, 4];
+  for (let i = 0; i <= 4; i++) {
+    console.log(arr[i]);
+  }
 } catch (e) {
-  console.log(e.message);
+  console.log("Out of bounds");
 }
